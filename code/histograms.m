@@ -9,8 +9,8 @@ voltage_min = -90;  % minimum voltage (just for binning)
 voltage_max = 90;   % maximum voltage 
 bin_edges = linspace(voltage_min, voltage_max, num_bins + 1);
 
-tmax = 200000;            % duration of each simulation
-num_simulations = 1;  % number of simulations for each algorithm
+tmax = 2000;            % duration of each simulation
+num_simulations = 100;  % number of simulations for each algorithm
 
 for j = 1:length(Ctot_values)
     Ctot = Ctot_values(j);
