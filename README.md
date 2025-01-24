@@ -5,6 +5,6 @@ _Repository for the project of Mathematical Modeling and Simulation, held by pro
 
 ### MOESM_RSSA_2.m example usage:
 ```
-% (tMax, Mtot, Ntot, V, delta, dT)
 [T, Dynamics] = MOESM_RSSA_2(4000, 40, 40, -50, 0.1, 0.0001); 
 ```
+_(Maximum Simulation Time, Calcium channels, Potassium channels, Voltage, delta, step)_
