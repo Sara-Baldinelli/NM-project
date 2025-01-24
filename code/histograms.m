@@ -9,8 +9,8 @@ voltage_min = -90;  % minimum voltage (just for binning)
 voltage_max = 90;   % maximum voltage 
 bin_edges = linspace(voltage_min, voltage_max, num_bins + 1);
 
-tmax = 2000;            % duration of each simulation
-num_simulations = 100;  % number of simulations for each algorithm
+tmax = 200000;            % duration of each simulation
+num_simulations = 1;  % number of simulations for each algorithm
 
 for j = 1:length(Ctot_values)
     Ctot = Ctot_values(j);
@@ -36,7 +36,7 @@ for j = 1:length(Ctot_values)
         for i = 1:num_bins
             bin_totals_RSSA(i) = bin_totals_RSSA(i) + sum(open_channels(bin_indices == i));  % counts open channels for each bin
         end
-        total_open_channels_RSSA = total_open_channels_RSSA + sum(open_channels);            % total open channels
+        total_open_channels_RSSA = total_open_channels_RSSA + sum(open_channels);            % total number of open channels
     end
 
 
@@ -73,6 +73,6 @@ for j = 1:length(Ctot_values)
     bar(bin_centers, bin_proportions_2, 'hist');
     xlabel('Voltage (mV)');
     ylabel('Proportion of Total Open Channels');
-    title(['Total Open Channels vs Voltage (Random Time Change, Mtot = Ntot = ', num2str(Ctot), ')']);
+    title(['Total Open Channels vs Voltage (RTC, Mtot = Ntot = ', num2str(Ctot), ')']);
     xlim([-100 100]);
 end
