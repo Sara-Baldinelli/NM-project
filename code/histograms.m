@@ -26,7 +26,7 @@ for j = 1:length(Ctot_values)
         [T, Dynamics] = MOESM4_RSSA_2(tmax, Ctot, Ctot, 100, 0.1, 0.001);
     
         voltage = Dynamics(:, 5);                         % voltage values
-        open_channels = Dynamics(:, 3) + Dynamics(:, 4);  % numbr of open channels
+        open_channels = Dynamics(:, 3) + Dynamics(:, 4);  % number of open channels
                                                                 
         [bin_counts, ~, bin_indices] = histcounts(voltage, bin_edges);  % bin voltage values
         % bin_counts is a vector that contains the count of elements from voltage that fall into each of the bins
