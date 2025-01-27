@@ -3,7 +3,7 @@ _Repository for the project of Mathematical Modeling and Simulation, held by pro
 
 [MOESM4_RSSA_2.m](https://github.com/Sara-Baldinelli/NM-project/blob/main/code/MOESM4_RSSA_2.m) implements the RSSA simulation and [histograms.m](https://github.com/Sara-Baldinelli/NM-project/blob/main/code/histograms.m) generates histograms for RSSA and RTC comparison.
 
-### MOESM_RSSA_2.m example usage:
+### MOESM4_RSSA_2.m example usage:
 ```
 [T, Dynamics] = MOESM4_RSSA_2(4000, 40, 40, -50, 0.1, 0.0001); 
 ```
